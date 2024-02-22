@@ -1,0 +1,134 @@
+:root {
+  --font-family: 'Karla', sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --color-primary: rgba(80, 53, 255, 1);
+  --color-secondary: rgba(89, 227, 145, 1);
+  --color-text: rgba(74, 78, 116, 1);
+  --color-neutral-100: rgba(255, 255, 255, 1);
+  --color-neutral-500: rgba(245, 245, 245, 1);
+  --color-background: rgba(11, 36, 52, 1);
+  --fs-body: 1em;
+  --body-line-height: 1.2;
+}
+
+*/ *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  /* line-height: calc(1em + 0.725rem); check later */
+  margin: 0;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body,
+input,
+button,
+select,
+option {
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family);
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: var(--color-background);
+  line-height: var(--body-line-height);
+  font-size: var(--fs-body);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tenzie {
+  background: var(--color-neutral-100);
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  gap: 32px;
+  text-align: center;
+}
+
+.tenzie h1 {
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.tenzie p {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.03em;
+  max-width: 18em;
+  margin-top: 4px;
+}
+
+.tenzie button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px 32px;
+  height: 40px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 1em;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 3.1999998092651367px 7.679999828338623px 0px rgba(0, 0, 0, 0.18);
+}
+
+.tenzie button:hover {
+  opacity: 0.9;
+}
+
+.tenzie--dices {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 16px;
+}
+
+.tenzie--die {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5em;
+  background: var(--color-neutral-500);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
