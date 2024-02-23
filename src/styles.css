@@ -4,10 +4,10 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
   --color-primary: rgba(80, 53, 255, 1);
-  --color-secondary: rgba(89, 227, 145, 1);
+  --color-secondary: hsl(144, 71%, 62%);
   --color-text: rgba(74, 78, 116, 1);
   --color-neutral-100: rgba(255, 255, 255, 1);
-  --color-neutral-500: rgba(245, 245, 245, 1);
+  --color-neutral-500: #f5f5f5;
   --color-background: rgba(11, 36, 52, 1);
   --fs-body: 1em;
   --body-line-height: 1.2;
@@ -94,7 +94,30 @@ body {
   margin-top: 4px;
 }
 
-.tenzie button {
+.tenzie--dices {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 16px;
+}
+
+.die {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5em;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: all 200ms ease-out;
+}
+
+.die:hover {
+  background: var(--color-secondary);
+}
+
+.roll-dice {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -110,25 +133,14 @@ body {
   box-shadow: 0px 3.1999998092651367px 7.679999828338623px 0px rgba(0, 0, 0, 0.18);
 }
 
-.tenzie button:hover {
+.roll-dice:hover {
   opacity: 0.9;
 }
 
-.tenzie--dices {
-  display: grid;
-  grid-template: auto auto / repeat(5, 1fr);
-  gap: 16px;
+.roll-dice:focus {
+  outline: none;
 }
 
-.tenzie--die {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  font-size: 1.5em;
-  background: var(--color-neutral-500);
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+.roll-dice:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
